@@ -1,3 +1,19 @@
 {
-  "python.pythonPath": "C:\\Users\\Travis.C.LaGrone\\.virtualenvs\\utd-cs6375-hw2-Ha2DhbRy\\Scripts\\python.exe"
+  "cSpell.words": [
+    "Multinomial"
+  ],
+  
+  "python.pythonPath": "~/.virtualenvs/utd-cs6375-hw2-Ha2DhbRy/Scripts/python.exe",
+  
+  "python.sortImports.args": [
+    "--order-by-type",
+    "--lines-after-imports",
+    "2",
+    "--lines-between-types",
+    "1",
+    "--balanced",
+    "--use-parentheses",
+    "--trailing-comma",
+  ],
+  "python.sortImports.path": "isort",
 }
