@@ -7,6 +7,8 @@ verify_ssl = true
 pydocstyle = "*"
 flake8 = "*"
 mypy = "*"
+pep8 = "*"
+isort = "*"
 
 [packages]
 numpy = "*"
