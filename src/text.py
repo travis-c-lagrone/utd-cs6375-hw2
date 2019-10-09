@@ -49,7 +49,7 @@ class BagOfWords:
         return ordered_words, array(standardized_bags)
 
 
-class Bernoulli:  # noqa: D101
+class Bernoulli:
     """A textual data preprocessor that implements the bernoulli model.
 
     This class complies with the Scikit-Learn `Transformer protocol`_.
