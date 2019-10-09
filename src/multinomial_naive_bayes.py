@@ -54,4 +54,4 @@ class MultinomialNaiveBayes(BaseEstimator, ClassifierMixin):  # noqa: D101
 
     @staticmethod
     def __argmax(D: Dict[Optional[Any], float]) -> Optional[Any]:
-        return max(D.items(), key=lambda kv: kv[1])[1]
+        return max(D.items(), key=lambda kv: kv[1])[0]
