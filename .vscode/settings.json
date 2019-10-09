@@ -2,18 +2,31 @@
   "cSpell.ignoreWords": [
     "cond",
     "def",
+    "entrypoints",
+    "isort",
+    "joblib",
+    "mccabe",
     "ndarray",
+    "nltk",
     "noqa",
     "preds",
     "probs",
-    "sklearn"
+    "punkt",
+    "pycodestyle",
+    "pydocstyle",
+    "pyflakes",
+    "scikit",
+    "scipy",
+    "sklearn",
+    "snowballstemmer",
   ],
   "cSpell.words": [
-    "Multinomial"
+    "multinomial"
   ],
   
   "python.pythonPath": "~/.virtualenvs/utd-cs6375-hw2-Ha2DhbRy/Scripts/python.exe",
   
+  "python.linting.enabled": true,
   "python.linting.flake8Args": [
     "--extend-ignore=E501"
   ],
@@ -28,6 +41,5 @@
     "--use-parentheses",
     "--trailing-comma",
   ],
-  "python.linting.enabled": true,
-  // "python.sortImports.path": "isort",
+  "python.sortImports.path": "isort",
 }
