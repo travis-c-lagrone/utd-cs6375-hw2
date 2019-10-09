@@ -1,10 +1,23 @@
 {
+  "cSpell.ignoreWords": [
+    "cond",
+    "def",
+    "ndarray",
+    "noqa",
+    "preds",
+    "probs",
+    "sklearn"
+  ],
   "cSpell.words": [
     "Multinomial"
   ],
   
   "python.pythonPath": "~/.virtualenvs/utd-cs6375-hw2-Ha2DhbRy/Scripts/python.exe",
   
+  "python.linting.flake8Args": [
+    "--extend-ignore=E501"
+  ],
+
   "python.sortImports.args": [
     "--order-by-type",
     "--lines-after-imports",
@@ -15,5 +28,6 @@
     "--use-parentheses",
     "--trailing-comma",
   ],
-  "python.sortImports.path": "isort",
+  "python.linting.enabled": true,
+  // "python.sortImports.path": "isort",
 }
