@@ -47,11 +47,11 @@ class MultinomialNaiveBayes(BaseEstimator, ClassifierMixin):  # noqa: D101
                 for j in range(self._dim):
                     score += log(self._cond_probs[j][c]) * row[j]
                 scores[c] = score
-            pred = self._argmax(scores)
+            pred = self.__argmax(scores)
             preds.append(pred)
 
         return array(preds)
 
     @staticmethod
-    def _argmax(D: Dict[Optional[Any], float]) -> Optional[Any]:
+    def __argmax(D: Dict[Optional[Any], float]) -> Optional[Any]:
         return max(D.items(), key=lambda kv: kv[1])[1]
