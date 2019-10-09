@@ -24,22 +24,35 @@
     "multinomial"
   ],
   
-  "python.pythonPath": "~/.virtualenvs/utd-cs6375-hw2-Ha2DhbRy/Scripts/python.exe",
-  
-  "python.linting.enabled": true,
-  "python.linting.flake8Args": [
-    "--extend-ignore=E501"
-  ],
+  "files.associations": {
+    "*.cfg": "ini",
+    ".env": "ini",
+    ".flake8": "ini",
+    "Pipfile": "toml"
+  },
 
-  "python.sortImports.args": [
-    "--order-by-type",
-    "--lines-after-imports",
-    "2",
-    "--lines-between-types",
-    "1",
-    "--balanced",
-    "--use-parentheses",
-    "--trailing-comma",
-  ],
-  "python.sortImports.path": "isort",
+  // Disable unused Python components.
+  "python.dataScience.enabled": false,
+  "python.jediEnabled": false,
+  "python.linting.banditEnabled": false,
+  "python.linting.prospectorEnabled": false,
+  "python.linting.pycodestyleEnabled": false,
+  "python.linting.pylamaEnabled": false,
+  "python.linting.pylintEnabled": false,
+  
+  // Enable select Python components.
+  "python.linting.enabled": true,
+  "python.linting.flake8Enabled": true,
+  "python.linting.mypyEnabled": true,
+  "python.linting.pydocstyleEnabled": true,
+  "python.workspaceSymbols.enabled": true,
+  "vsintellicode.python.completionsEnabled": true,
+
+  // Locate relevant Python components in the local context.
+  "python.envFile": "${workspaceFolder}/.env",
+  "python.linting.pydocstylePath": "~/.virtualenvs/utd-cs6375-hw2-Ha2DhbRy/Scripts/pydocstyle.exe",
+  "python.pipenvPath": "pipenv",
+  "python.pythonPath": "~/.virtualenvs/utd-cs6375-hw2-Ha2DhbRy/Scripts/python.exe",
+
+  "python.linting.pydocstyleArgs": []  // Clear any/all confounding arguments that may be otherwise inherited from the global/user VSCode settings.
 }

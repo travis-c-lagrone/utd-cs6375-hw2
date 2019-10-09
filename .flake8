@@ -1,0 +1,4 @@
+[flake8]
+hang_closing = false
+max_doc_length = null
+max_line_length = 80

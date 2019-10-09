@@ -4,11 +4,10 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-pydocstyle = "*"
 flake8 = "*"
-mypy = "*"
-pep8 = "*"
+pydocstyle = "*"
 isort = "*"
+mypy = "*"
 
 [packages]
 numpy = "*"
