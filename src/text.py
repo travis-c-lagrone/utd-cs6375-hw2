@@ -22,9 +22,9 @@ class BagOfWords:
                 Each element is the complete textual _content_ of a document.
 
         Returns:
-            List[str]: The lexicographically-ordered corpus of all words in the documents.
-                The cardinality of the corpus is exactly the width of the returned dataset.
-                The order of the corpus is exactly the order of the corresponding columns in the returned dataset.
+            List[str]: The lexicographically-ordered vocabulary extracted from the collection of documents.
+                The cardinality of the vocabulary is exactly the width of the returned dataset.
+                The ordering of the vocabulary is exactly the ordering of the corresponding columns in the returned dataset.
                 The exact nature of the tokenization algorithm is an opaque implementation detail.
 
             ndarray: The 2d integral array representing the bag-of-words of the documents.
@@ -33,20 +33,20 @@ class BagOfWords:
                 Each entry is the absolute frequency the corresponding word in the corresponding document.
 
         """
-        corpus: Set[str] = set()
+        words: Set[str] = set()
         bags: List[Dict[str, int]] = list()
 
         for doc in docs:
             tokens = word_tokenize(doc)
             bag = Counter(tokens)
 
-            corpus.update(bag.keys())
+            words.update(bag.keys())
             bags.append(bag)
 
-        ordered_corpus = sorted(corpus)
-        standardized_bags = [[bag[word] for word in corpus] for bag in bags]
+        ordered_words = sorted(words)
+        standardized_bags = [[bag[word] for word in words] for bag in bags]
 
-        return ordered_corpus, array(standardized_bags)
+        return ordered_words, array(standardized_bags)
 
 
 class Bernoulli:  # noqa: D101
