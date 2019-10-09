@@ -45,7 +45,7 @@ class MultinomialNaiveBayes(BaseEstimator, ClassifierMixin):  # noqa: D101
             for c in self.classes_:
                 score = log(self._prior_probs[c])
                 for j in range(self._dim):
-                    score += log(self._cond_probs[j][c])
+                    score += log(self._cond_probs[j][c]) * row[j]
                 scores[c] = score
             pred = self._argmax(scores)
             preds.append(pred)
