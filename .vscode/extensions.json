@@ -6,7 +6,7 @@
 	"recommendations": [
 		"ms-python.python",
         "littlefoxteam.vscode-python-test-adapter",
-            "ms-pyright.pyright",
+        "ms-pyright.pyright",
 		"mgesbert.python-path",
 		"iansan5653.format-python-docstrings"
 	],
