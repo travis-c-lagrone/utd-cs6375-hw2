@@ -29,11 +29,37 @@
     "multinomial"
   ],
   
+  "explorerExclude.backup": null,
   "files.associations": {
     "*.cfg": "ini",
     ".env": "ini",
     ".flake8": "ini",
     "Pipfile": "toml"
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/.idea": true,
+    "**/.ipynb_checkpoints": true,
+    "**/.pytest_cache": true,
+    "**/.mypy_cache": true,
+    "**/.vs": true,
+    "**/bin": true,
+    "**/obj": true,
+    "**/out": true,
+    "**/*.code-workspace": false,
+    "**/.vscode": false,
+    "**/.vscode/solution-explorer": true,
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true,
+    "**/target": false,
+    ".venv": true,
+    ".vscode": true
   },
 
   // Disable unused Python components.
@@ -59,8 +85,9 @@
   "python.linting.pydocstylePath": "${workspaceFolder}/.venv/Scripts/pydocstyle.exe",
   "python.pythonPath":             "${workspaceFolder}/.venv/Scripts/python.exe",
 
-  // Clear any/all confounding arguments that may be otherwise inherited from the global/user VSCode settings.
+  // Clear any/all confounding tool paths and arguments that may be otherwise inherited from the global/user VSCode settings.
   "python.formatting.blackArgs":   [],
   "python.linting.flake8Args":     [],
   "python.linting.pydocstyleArgs": [],
+  "python.sortImports.path":       null,  // python.sortImports is not disablable, so nullifying any pre-existing path is required instead.
 }

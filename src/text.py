@@ -1,8 +1,10 @@
+"""Transformers for encoding/featurizing/preprocessing textual data."""
+
 from collections import Counter
 from typing import Collection, Dict, List, Set
 
 from nltk import word_tokenize
-from numpy import array, clip, ndarray
+from numpy import array, ndarray
 
 
 class BagOfWords:
