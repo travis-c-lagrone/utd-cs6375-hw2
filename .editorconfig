@@ -1,0 +1,47 @@
+# All files SHOULD have this configuration for portability (unless otherwise specified).
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+indent_style = space
+indent_size = 4
+
+# Python MUST have this configuration.
+[*.{py,pyx}]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+indent_style = space
+indent_size = 4
+
+# TOML MUST have this configuration.
+[*.{tml,toml}]
+charset = utf-8
+
+# YAML MUST have this configuration.
+[*.{yml,yaml}]
+indent_style = space
+indent_size = 2
+
+# YAML SHOULD have this configuration.
+[*.{yml,yaml}]
+insert_final_newline = true
+# don't trim trailing whitespace so as to not conflict with embedded content, e.g. Markdown
+trim_trailing_whitespace = false
+
+# Markdown MUST have this configuration.
+[*.{md,markdown}]
+insert_final_newline = true
+# don't trim trailing whitespace because it can be significant (e.g. https://github.github.com/gfm/#hard-line-breaks)
+trim_trailing_whitespace = false
+
+# Data files MUST have this configuration.
+[/data/**]
+root = true
+charset = unset
+indent_size = unset
+indent_style = unset
+end_of_line = unset
+insert_final_newline = unset
+max_line_length = off  # "max_line_length" is not supported by all editors.
+trim_trailing_whitespace = unset
