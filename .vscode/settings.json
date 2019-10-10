@@ -62,6 +62,10 @@
     ".vscode": true
   },
 
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  
   // Disable unused Python components.
   "python.dataScience.enabled":        false,
   "python.jediEnabled":                false,
