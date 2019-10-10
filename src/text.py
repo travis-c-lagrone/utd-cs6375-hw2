@@ -28,7 +28,6 @@ class BagOfWords:
                 The cardinality of the vocabulary is exactly the width of the returned dataset.
                 The ordering of the vocabulary is exactly the ordering of the corresponding columns in the returned dataset.
                 The exact nature of the tokenization algorithm is an opaque implementation detail.
-
             ndarray: The 2d integral array representing the bag-of-words featurization of the documents.
                 Each row is a document.
                 Each column is a word.
@@ -72,7 +71,6 @@ class Bernoulli:
                 The cardinality of the vocabulary is exactly the width of the returned dataset.
                 The ordering of the vocabulary is exactly the ordering of the corresponding columns in the returned dataset.
                 The exact nature of the tokenization algorithm is an opaque implementation detail.
-
             ndarray: The 2d integral array representing the bernoulli featurization of the documents.
                 Each row is a document.
                 Each column is a word.
