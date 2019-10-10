@@ -1,4 +1,2 @@
 [pydocstyle]
 convention = google
-add_ignore =
-    D100,  ; Missing docstring in public module
