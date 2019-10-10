@@ -1,61 +1,74 @@
-# All files SHOULD have this configuration for portability (unless otherwise specified).
+# CAUTION The `max_line_length` setting is not supported in all editors.
+
+# All
 [*]
-charset = utf-8
-end_of_line = lf
-insert_final_newline = true
-indent_style = space
-indent_size = 4
+    # Recommendations
+        charset = utf-8
+        end_of_line = lf
+        insert_final_newline = true
+        indent_style = space
 
-# Python MUST have this configuration.
-[*.{py,pyx}]
-charset = utf-8
-end_of_line = lf
-insert_final_newline = true
-indent_style = space
-indent_size = 4
-
-# Python SHOULD have this configuration.
-[*.{py,pyx}]
-max_line_length = 88  # Default value in the Black formatter.
-
-# INI MUST have this configuration.
-[*.{ini,cfg,env,editorconfig,flake8,pydocstyle}]
-max_line_length = unset
-
-# TOML MUST have this configuration.
-[*.{tml,toml}]
-charset = utf-8
-max_line_length = unset
-
-# YAML MUST have this configuration.
-[*.{yml,yaml}]
-charset = utf-8
-indent_style = space
-indent_size = 2
-max_line_length = unset
-
-# YAML SHOULD have this configuration.
-[*.{yml,yaml}]
-insert_final_newline = true
-trim_trailing_whitespace = false  # Don't trim trailing whitespace so as to not conflict with embedded content, e.g. Markdown.
-
-# JSON MAY have this configuration.
-[*.{json,jsonc}]
-indent_size = 2
-max_line_length = unset
-
-# Markdown MUST have this configuration.
-[*.{md,markdown}]
-insert_final_newline = true
-trim_trailing_whitespace = false  # Don't trim trailing whitespace because it can be significant (e.g. https://github.github.com/gfm/#hard-line-breaks)
-
-# Data files MUST have this configuration.
+# Data
 [/data/**]
-root = true
-charset = unset
-indent_size = unset
-indent_style = unset
-end_of_line = unset
-insert_final_newline = unset
-max_line_length = off  # "max_line_length" is not supported by all editors.
-trim_trailing_whitespace = unset
+    # Requirements
+        root = true
+        charset = unset
+        indent_size = unset
+        indent_style = unset
+        end_of_line = unset
+        insert_final_newline = unset
+        max_line_length = unset
+        trim_trailing_whitespace = unset
+
+# INI
+[*.{ini,cfg,env,editorconfig,flake8,pydocstyle}]
+    # Recommendations
+        indent_style = space
+        max_line_length = unset
+
+# JSON
+[*.{json,jsonc}]
+    # Recommendations
+        indent_size = 2
+        max_line_length = unset
+
+# Markdown
+[*.{md,markdown}]
+    # Requirements
+        indent_style = space
+    # Recommendations
+        indent_size = 2
+        insert_final_newline = true
+        trim_trailing_whitespace = false  # Trailing whitespace can be significant in Markdown, e.g. https://github.github.com/gfm/#hard-line-breaks
+
+# Python
+[*.{py,pyx}]
+    # Requirements
+        charset = utf-8
+        end_of_line = lf
+        insert_final_newline = true
+        indent_style = space
+        insert_final_newline = true
+        tab_width = 4
+        trim_trailing_whitespace = true
+    # Recommendations
+        indent_size = 4
+        max_line_length = 88  # 88 is the default value of `max_line_length` in the Black formatter.
+
+# TOML
+[*.{tml,toml}]
+    # Requirements
+        charset = utf-8
+    # Recommendations
+        max_line_length = unset
+
+# YAML
+[*.{yml,yaml}]
+    # Requirements
+        charset = utf-8
+        indent_style = space
+        indent_size = 2
+    # Recommendations
+        insert_final_newline = true
+        max_line_length = unset
+        trim_trailing_whitespace = false  # Don't trim trailing whitespace so as to not conflict with embedded content, e.g. Markdown.
