@@ -15,6 +15,7 @@
     "pycodestyle",
     "pydocstyle",
     "pyflakes",
+    "pypi",
     "scikit",
     "scipy",
     "sklearn",
@@ -36,27 +37,30 @@
   },
 
   // Disable unused Python components.
-  "python.dataScience.enabled": false,
-  "python.jediEnabled": false,
-  "python.linting.banditEnabled": false,
-  "python.linting.prospectorEnabled": false,
+  "python.dataScience.enabled":        false,
+  "python.jediEnabled":                false,
+  "python.linting.banditEnabled":      false,
+  "python.linting.mypyEnabled":        false,  // Use the VSCode Pyright extension instead of MyPy.
+  "python.linting.prospectorEnabled":  false,
   "python.linting.pycodestyleEnabled": false,
-  "python.linting.pylamaEnabled": false,
-  "python.linting.pylintEnabled": false,
+  "python.linting.pylamaEnabled":      false,
+  "python.linting.pylintEnabled":      false,
   
   // Enable select Python components.
-  "python.linting.enabled": true,
-  "python.linting.flake8Enabled": true,
-  "python.linting.mypyEnabled": true,
-  "python.linting.pydocstyleEnabled": true,
-  "python.workspaceSymbols.enabled": true,
+  "python.formatting.provider": "black",
+  "python.linting.enabled":                  true,
+  "python.linting.flake8Enabled":            true,
+  "python.linting.pydocstyleEnabled":        true,
+  "python.workspaceSymbols.enabled":         true,
   "vsintellicode.python.completionsEnabled": true,
 
   // Locate relevant Python components in the local context.
-  "python.envFile": "${workspaceFolder}/.env",
-  "python.linting.pydocstylePath": ".venv/Scripts/pydocstyle.exe",
-  "python.pipenvPath": "pipenv",
-  "python.pythonPath": ".venv/Scripts/python.exe",
+  "python.envFile":                "${workspaceFolder}/.env",
+  "python.linting.pydocstylePath": "${workspaceFolder}/.venv/Scripts/pydocstyle.exe",
+  "python.pythonPath":             "${workspaceFolder}/.venv/Scripts/python.exe",
 
-  "python.linting.pydocstyleArgs": []  // Clear any/all confounding arguments that may be otherwise inherited from the global/user VSCode settings.
+  // Clear any/all confounding arguments that may be otherwise inherited from the global/user VSCode settings.
+  "python.formatting.blackArgs":   [],
+  "python.linting.flake8Args":     [],
+  "python.linting.pydocstyleArgs": [],
 }

@@ -4,15 +4,14 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-flake8 = "*"
-pydocstyle = "*"
-isort = "*"
-mypy = "*"
+black = "~=19.3b0"  # pre-release
+flake8 = "~=3.7"
+pydocstyle = "~=4.0"
 
 [packages]
-numpy = "*"
+numpy = "~=1.17"
 sklearn = "*"
-nltk = "*"
+nltk = "~=3.4"
 
 [requires]
 python_version = "3.7"

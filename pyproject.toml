@@ -1,0 +1,7 @@
+[build-system]
+requires = ["setuptools"]
+
+[tool.black]
+include = "(^|/)src/.*\.pyi?$"
+safe = true
+target_version = "py37"
