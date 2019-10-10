@@ -19,6 +19,10 @@
     "scipy",
     "sklearn",
     "snowballstemmer",
+    "venv",
+    "venvs",
+    "virtualenv",
+    "virtualenvs",
   ],
   "cSpell.words": [
     "multinomial"
@@ -50,9 +54,9 @@
 
   // Locate relevant Python components in the local context.
   "python.envFile": "${workspaceFolder}/.env",
-  "python.linting.pydocstylePath": "~/.virtualenvs/utd-cs6375-hw2-Ha2DhbRy/Scripts/pydocstyle.exe",
+  "python.linting.pydocstylePath": ".venv/Scripts/pydocstyle.exe",
   "python.pipenvPath": "pipenv",
-  "python.pythonPath": "~/.virtualenvs/utd-cs6375-hw2-Ha2DhbRy/Scripts/python.exe",
+  "python.pythonPath": ".venv/Scripts/python.exe",
 
   "python.linting.pydocstyleArgs": []  // Clear any/all confounding arguments that may be otherwise inherited from the global/user VSCode settings.
 }
